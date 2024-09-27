@@ -1,5 +1,5 @@
 import axios from "axios";
-import { CountryItem, Currencies, Currency } from "@/services/countryList.type";
+import { CountryItem, Currency } from "@/services/countryList.type";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ReactLoading from "react-loading";
@@ -51,7 +51,7 @@ const Detailpage = () => {
     return new Intl.NumberFormat().format(number);
   };
 
-  const getCurrencies = (currencies: Currencies): Currency[] => {
+  const getCurrencies = (currencies: Currency): Currency[] => {
     return Object.values(currencies);
   };
 
